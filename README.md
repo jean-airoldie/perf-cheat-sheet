@@ -10,6 +10,6 @@ perf stat ./benchmark
 perf record --call-graph dwarf ./benchmark
 # Analyzed the recording.
 # Reverse the call tree (from caller to callee).
-perf report -g 'graph,0.5,caller'
+perf report -g 'graph,0.5,caller' --no-children
 ```
 [goldmine](https://gist.github.com/dlaehnemann/df31787c41bd50c0fe223df07cf6eb89)
